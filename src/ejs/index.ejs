@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('./components/common/_head', { description: '株式会社 Grass Field の公式ウェブサイトです。' }) %>
+
+
+<body class="top">
+
+<%- include('./components/common/_header.ejs', { src: '../', element: 'h1' }) %>
+
+
+<main class="main">
+
+  <div class="hero">
+    <div class="hero__inner l-container">
+
+      <p class="hero__catch">
+        キャッチコピーの<br>
+        文章がはいりますキャッチコピーの文章が入ります
+      </p>
+
+      <figure class="hero__figure">
+        <img class="hero__image" src="../images/top/mv_illust.svg" alt="" width="440" height="382">
+      </figure>
+
+    </div><!-- /.l-container -->
+  </div><!-- /.hero -->
+
+
+  <div class="l-container">
+
+    <section class="topSection">
+      <h2 class="topSection__heading">Service</h2>
+
+      <ul class="topSection__serviceList">
+        <li class="primaryCard">
+          <a class="primaryCard__link" href="">
+            <h3 class="primaryCard__heading">サービス名</h3>
+
+            <p class="primaryCard__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+            <figure class="primaryCard__figure">
+              <img class="primaryCard__image" src="../images/service/ph_service01.jpg" alt="" width="800" height="500">
+            </figure>
+
+            <a class="primaryCard__btn moreBtn" href="#">詳しく見る</a>
+          </a>
+        </li>
+
+
+      </ul><!-- /.topSection__serviceList -->
+    </section>
+
+  </div><!-- /.l-container -->
+
+
+</main>
+
+
+
+
+
+
+
+</body>
+</html>
