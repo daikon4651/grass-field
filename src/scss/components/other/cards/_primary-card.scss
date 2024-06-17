@@ -1,0 +1,97 @@
+// カード・プライマリ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.primaryCard {
+
+  &__link {
+    border: solid 1px #ccc;
+    padding-bottom: 20px;
+    color: g.$textColor;
+    text-decoration-line: none;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+
+    @include g.hover-focus {
+      border-color: g.$lightMainColor;
+      color: g.$textColor;
+    }
+  }
+
+  &__heading {
+    margin: 30px 20px 0;
+    @include g.rem-fz(20);
+  }
+
+  &__text {
+    margin: 10px 20px 0;
+  }
+
+  &__figure {
+    order: -1;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: calc(164 / 256 * 100%);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    transition: scale .5s;
+
+    .primaryCard__link:hover &,
+    .primaryCard__link:focus & {
+      scale: 1.2;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    margin: 30px 20px 0;
+    padding: 10px;
+    background-color: g.$mainColor;
+    color: g.$whiteColor;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity .3s;
+
+    .primaryCard__link:hover &,
+    .primaryCard__link:focus & {
+      opacity: .8;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      margin-block: auto;
+      width: 10px;
+      height: 10px;
+      border-top: solid 2px;
+      border-right: solid 2px;
+      rotate: 45deg;
+      transition: translate .3s;
+
+      .primaryCard__link:hover & {
+        translate: 5px;
+      }
+    }
+  }
+}

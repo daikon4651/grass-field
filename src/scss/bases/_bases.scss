@@ -1,0 +1,24 @@
+// ベース
+
+
+// 変数、ミックスイン、関数
+@use "../global/" as g;
+
+
+
+
+body {
+  color: g.$textColor;
+  font-family: g.$Noto;
+  line-height: 1.5;
+}
+
+a {
+  color: g.$mainColor;
+  transition: color .3s;
+
+  @include g.hover-focus {
+    color: g.$lightMainColor;
+    text-decoration-line: none;
+  }
+}

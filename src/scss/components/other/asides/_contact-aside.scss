@@ -1,0 +1,63 @@
+// 補足・関連情報  お問い合わせ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global";
+
+
+
+.contactAside {
+  margin-top: 50px;
+  padding-block: 50px;
+  background-color: global.$mainColor;
+  color: global.$whiteColor;
+  text-align: center;
+
+  &__lead {
+    margin-top: 40px;
+    @include global.rem-fz(14);
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+
+  &__tel {
+    margin-top: 20px;
+    font-family: global.$Oswald;
+    @include global.rem-fz(24);
+
+    &Num {
+      color: global.$whiteColor;
+      @include global.rem-fz(40);
+      font-weight: bold;
+      text-decoration-line: none;
+    }
+  }
+
+  &__datetime {
+    @include global.rem-fz(14);
+  }
+
+
+  @include global.mq {
+    margin-top: 80px;
+    padding-block: 80px;
+
+    &__lead {
+      @include global.rem-fz(16);
+    }
+
+    &__tel {
+      @include global.rem-fz(30);
+
+      &Num {
+        @include global.rem-fz(48);
+      }
+    }
+
+    &__datetime {
+      @include global.rem-fz(16);
+    }
+  }
+}

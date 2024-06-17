@@ -1,0 +1,38 @@
+// パーツ・見出し
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+
+// ターシャリ
+.tertiaryHeading {
+  @include g.rem-fz(24);
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    width: 50px;
+    border-top: solid 1px g.$mainColor;
+    margin-top: 20px;
+  }
+
+  &._white {
+    color: g.$whiteColor;
+
+    &::after {
+      border-color: g.$whiteColor;
+    }
+  }
+
+  &._center {
+    align-items: center;
+  }
+
+
+  @include g.mq('md-min') {
+    @include g.rem-fz(28);
+  }
+}

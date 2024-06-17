@@ -1,0 +1,32 @@
+// フッター
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+
+.footer {
+  padding-inline: 20px;
+  background-color: g.$blackColor;
+  color: g.$whiteColor;
+
+  &__copyright {
+    padding-block: 40px;
+    @include g.rem-fz(14);
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+  @include g.mq() {
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__copyright {
+      padding-block: 0;
+    }
+  }
+}

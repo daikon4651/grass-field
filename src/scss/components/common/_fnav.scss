@@ -1,0 +1,45 @@
+// フッターナビゲーション
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+.fNav {
+
+  &__item {
+    border-bottom: solid 1px #707070;
+  }
+
+  &__link {
+    display: block;
+    padding: 1em 20px;
+    color: g.$whiteColor;
+    @include g.rem-fz(14);
+    font-weight: bold;
+    text-decoration-line: none;
+  }
+
+
+  @include g.mq('md-min') {
+
+    &__list {
+      display: flex;
+      border-right: solid 1px #707070;
+    }
+
+    &__item {
+      border-bottom: none;
+      border-left: solid 1px #707070;
+    }
+
+    &__link {
+      padding: 0 1em;
+
+      &:hover {
+        text-decoration: underline solid;
+        text-underline-position: under;
+      }
+    }
+  }
+}

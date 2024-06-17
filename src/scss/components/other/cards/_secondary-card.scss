@@ -1,0 +1,70 @@
+// カード・セカンダリ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.secondaryCard {
+
+  &__link {
+    color: g.$textColor;
+    text-decoration-line: none;
+    display: flex;
+    flex-direction: column;
+
+    @include g.hover-focus {
+      color: g.$mainColor;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    order: 1;
+    margin-top: 0.56em;
+    padding-inline-start: 1em;
+    @include g.rem-fz(14);
+    font-weight: bold;
+
+    &Icon {
+      position: absolute;
+      left: 0;
+      top: .25em;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: calc(164 / 256 * 100%);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale .5s;
+
+    .secondaryCard__link:hover &,
+    .secondaryCard__link:focus & {
+      scale: 1.2;
+    }
+  }
+
+
+  @include g.mq {
+
+    &__heading {
+      @include g.rem-fz(16);
+    }
+  }
+}

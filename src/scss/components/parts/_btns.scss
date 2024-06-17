@@ -1,0 +1,47 @@
+// パーツ・ボタン
+
+
+// 変数、ミックスイン、関数
+@use "../../global";
+
+
+
+// プライマリ
+.primaryBtn {
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: solid 2px global.$mainColor;
+  color: global.$textColor;
+  @include global.rem-fz(18);
+  font-weight: bold;
+  line-height: 1;
+  text-decoration-line: none;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+
+  @include global.hover-focus {
+    background-color: rgba(global.$lightMainColor, .1);
+    color: global.$textColor;
+  }
+
+  &__icon {
+    margin-right: .5em;
+  }
+
+  &._center {
+    margin-inline: auto;
+  }
+
+  &._white {
+    border-color: global.$whiteColor;
+    color: global.$whiteColor;
+
+    @include global.hover-focus {
+      background-color: rgba(#fff, .3);
+    }
+  }
+}
