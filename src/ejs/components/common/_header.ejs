@@ -1,9 +1,9 @@
 <header class="header">
-  <<%= element %> class="header__heading">
-    <a class="header__link" href="/">
-      <img class="header__logo" src="<%= src %>images/common/logo.svg" alt="株式会社 Grass Field" width="210" height="45">
+  <<%= element %> class="header__logo">
+    <a class="header__logoLink" href="/">
+      <img class="header__logoImage" src="<%= src %>images/common/logo.svg" alt="株式会社 Grass Field" width="210" height="45">
     </a>
   </<%= element %>>
 
-  <%- include('./_gnav') %>
+  <%- include('./_gnav', { className: 'header__gNav' }) %>
 </header>

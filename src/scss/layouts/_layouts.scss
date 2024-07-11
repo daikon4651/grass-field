@@ -69,6 +69,18 @@
     width: calc(100% / 2);
     padding-inline: 10px;
     margin-bottom: 40px;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &._sm-gap {
+    margin-bottom: -20px;
+
+    > * {
+      margin-bottom: 20px;
+    }
   }
 
 

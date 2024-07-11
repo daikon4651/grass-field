@@ -7,7 +7,6 @@
 
 
 .contactAside {
-  margin-top: 50px;
   padding-block: 50px;
   background-color: global.$mainColor;
   color: global.$whiteColor;
@@ -41,7 +40,6 @@
 
 
   @include global.mq {
-    margin-top: 80px;
     padding-block: 80px;
 
     &__lead {

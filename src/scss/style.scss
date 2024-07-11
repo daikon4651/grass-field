@@ -25,17 +25,30 @@
 
 
 
-// コンポーネント・パーツ
+/* コンポーネント・パーツ */
 
 // 見出し
 @use "./components/parts/_headings";
 
 // ボタン
-@use "@scss/components/parts/btns.scss";
+@use "@scss/components/parts/buttons.scss";
+
+// タグ
+@use "@scss/components/parts/_tags.scss";
 
 
 
-// コンポーネント・共通
+
+/* コンポーネント・共通 */
+
+// ヘッダー
+@use "./components/common/header";
+
+// グローバルナビゲーション
+@use "./components/common/gnav";
+
+// パンくずリスト
+@use "./components/common/breadcrumb";
 
 // フッター
 @use "components/common/footer";
@@ -46,15 +59,39 @@
 
 
 
-// コンポーネント・その他
+/* コンポーネント・その他 */
+
+// メインコンテンツ
+@use "components/other/mains/main.scss";
 
 // セクション・トップページ
 @use "components/other/sections/top-section";
+// セクション・お問合わせページ
+@use "components/other/sections/contact-section.scss";
 
 // 補足・関連情報  お問い合わせ
 @use "components/other/asides/contact-aside";
+
+// ヒーローイメージ・トップページ
+@use "components/other/heroes/top-hero.scss";
+// ヒーローイメージ・プライマリ
+@use "components/other/heroes/primary-hero";
+// ヒーローイメージ・セカンダリ
+@use "./components/other/heroes/secondary-hero";
 
 // カード・プライマリ
 @use "./components/other/cards/primary-card";
 // カード・セカンダリ
 @use "components/other/cards/secondary-card";
+
+// 縦並び・横並びの切り替え
+@use "./components/other/alternates/service-alternate";
+
+// フォーム・お問合わせ
+@use "components/other/forms/_contact-form";
+
+
+
+
+// Utilityクラス・ユーティリティクラス・汎用クラス・ヘルパークラス
+@use "./utilities/utilities";

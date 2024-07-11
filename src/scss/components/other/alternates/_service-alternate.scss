@@ -1,0 +1,117 @@
+// 縦並び・横並びが切り替え
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.serviceAlternate {
+
+  &Wrapper {
+    margin-inline: calc(50% - 50vw);
+    padding-inline: calc(50vw - 50%);
+    padding-bottom: 80px;
+    background-color: blue;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    margin-top: -10px;
+    border: solid 1px g.$mainColor;
+    padding: 40px 20px;
+    background-color: g.$whiteColor;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin-bottom: 25px;
+    @include g.rem-fz(20);
+  }
+
+  &__subHeading {
+    order: -1;
+    color: g.$mainColor;
+    font-weight: bold;
+  }
+
+  &__text {
+    @include g.rem-fz(14);
+    line-height: 2;
+
+    & + & {
+      margin-top: 2em;
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__figure {
+    margin-inline: calc(50% - 50vw);
+  }
+
+
+  @include g.mq {
+    display: flex;
+    flex-wrap: wrap;
+
+    & + & {
+      margin-top: 50px;
+    }
+
+    &Wrapper {
+      padding-bottom: 200px;
+      background-image: linear-gradient(
+        #fff 140px,
+        blue 140px
+      );
+    }
+
+    &__body {
+      flex-shrink: 0;
+      width: 66%;
+      margin-inline: 0 -16%;
+      margin-top: 70px;
+      padding: 40px;
+    }
+
+    &__figure {
+      flex-shrink: 0;
+      width: 50vw;
+      height: 500px;
+      margin-inline: 0 calc(50% - 50vw);
+    }
+
+    &._reverse {
+      flex-direction: row-reverse;
+
+      .serviceAlternate__body {
+        margin-inline: -16% 0;
+      }
+
+      .serviceAlternate__figure {
+        margin-inline: calc(50% - 50vw) 0;
+      }
+    }
+
+    &__heading {
+      @include g.rem-fz(28);
+    }
+
+    &__subHeading {
+      @include g.rem-fz(20);
+    }
+
+    &__text {
+      @include g.rem-fz(16);
+    }
+
+    &__image {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

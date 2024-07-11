@@ -1,0 +1,37 @@
+// セクション・お問合わせページ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.contactSection {
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &__form {
+    margin-top: 20px;
+  }
+
+  + * {
+    margin-top: 50px;
+  }
+
+
+  @include g.mq {
+
+    &__text {
+      margin-top: 40px;
+    }
+
+    &__form {
+      margin-top: 40px;
+    }
+
+    + * {
+      margin-top: 80px;
+    }
+  }
+}

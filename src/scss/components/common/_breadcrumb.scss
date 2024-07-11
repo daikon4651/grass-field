@@ -1,0 +1,46 @@
+// 共通・パンくずリスト
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+.breadcrumb {
+  display: none;
+
+
+  @include g.mq('md-min') {
+    display: block;
+    padding: 15px 50px;
+    background-color: #eee;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      @include g.rem-fz(12);
+
+      &:not(:first-child)::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-top: solid 1px g.$textColor;
+        border-right: solid 1px g.$textColor;
+        margin-inline: 3px;
+        rotate: 45deg;
+        translate: 0 -1px;
+      }
+    }
+
+    &__link {
+
+      &._current {
+        color: g.$textColor;
+        text-decoration-line: none;
+      }
+    }
+
+  }
+}

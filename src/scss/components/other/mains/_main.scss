@@ -1,0 +1,37 @@
+// メインコンテンツ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/index";
+
+
+
+.main {
+
+  &__intro {
+    padding-block: 50px;
+  }
+
+  &__catch {
+    @include index.rem-fz(22);
+    line-height: 1.8;
+  }
+
+  &__lead {
+    margin-top: 40px;
+    line-height: 1.8;
+  }
+
+
+  @include index.mq {
+
+    &__intro {
+      padding-block: 80px;
+    }
+
+    &__catch {
+      @include index.rem-fz(36);
+      text-align: center;
+    }
+  }
+}

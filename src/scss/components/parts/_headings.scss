@@ -6,6 +6,67 @@
 
 
 
+// プライマリ
+.primaryHeading {
+  letter-spacing: .2em;
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__ja {
+    margin-left: 0.2em;
+    @include g.rem-fz(30);
+  }
+
+  &__en {
+    margin-left: 0.2em;
+    color: g.$mainColor;
+    font-family: g.$Oswald;
+    @include g.rem-fz(20);
+    text-transform: uppercase;
+  }
+
+
+  @include g.mq {
+
+    &__ja {
+      margin-left: 0;
+      @include g.rem-fz(48);
+      letter-spacing: .22em;
+    }
+
+    &__en {
+      margin-left: 0;
+      @include g.rem-fz(24);
+      letter-spacing: .22em;
+    }
+  }
+}
+
+
+
+
+// セカンダリ
+.secondaryHeading {
+  font-family: g.$Oswald;
+  @include g.rem-fz(28);
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+
+  &._center {
+    text-align: center;
+  }
+
+
+  @include g.mq {
+    @include g.rem-fz(50);
+  }
+}
+
+
+
+
 // ターシャリ
 .tertiaryHeading {
   @include g.rem-fz(24);

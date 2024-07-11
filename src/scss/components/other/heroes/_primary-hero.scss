@@ -1,0 +1,29 @@
+// ヒーローイメージ・プライマリ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+.primaryHero {
+  height: calc(200 / 375 * 100vw);
+  padding-inline: 20px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &._service {
+    background-image: url(../images/service/bg_header_service.jpg);
+  }
+
+
+  @include g.mq {
+    height: 400px;
+    padding-inline: 50px;
+    text-align: start;
+    justify-content: flex-start;
+  }
+}

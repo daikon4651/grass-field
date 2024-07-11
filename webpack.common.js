@@ -97,6 +97,20 @@ module.exports = {
       inject: 'head',
       // minify: false,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/ejs/service/index.ejs',
+      filename: 'service/index.html',
+      chunks: ['another'],
+      inject: 'head',
+      // minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/ejs/contact/index.ejs',
+      filename: 'contact/index.html',
+      chunks: ['another'],
+      inject: 'head',
+      // minify: false,
+    }),
     // new MiniCssExtractPlugin({
     //   filename: 'css/style.[contenthash].css',
     // }),

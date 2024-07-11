@@ -7,6 +7,7 @@
 
 
 .topSection {
+  padding-bottom: 50px;
 
   &__heading {
     font-family: g.$Oswald;
@@ -14,8 +15,16 @@
     font-weight: 500;
     line-height: 1.2;
     text-transform: uppercase;
-    text-align: center;
     letter-spacing: .2em;
+
+    &._center {
+      text-align: center;
+    }
+
+
+    @include g.mq {
+      @include g.rem-fz(50);
+    }
   }
 
   &__list {
@@ -26,16 +35,9 @@
     margin-top: 40px;
   }
 
-  & + & {
-    margin-top: 50px;
-  }
-
 
   @include g.mq() {
-
-    &__heading {
-      @include g.rem-fz(50);
-    }
+    padding-bottom: 80px;
 
     &__list {
       margin-top: 40px;
@@ -43,11 +45,6 @@
 
     &__btn {
       margin-top: 60px;
-    }
-
-
-    & + & {
-      margin-top: 80px;
     }
   }
 }

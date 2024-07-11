@@ -1,0 +1,112 @@
+// フォーム・お問合わせページ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.contactForm {
+  padding-bottom: 50px;
+
+  &__table {
+    width: 100%;
+
+    &Row {
+      border-top: dashed 1px #ccc;
+      height: 100px;
+
+      &:last-child {
+        border-bottom: dashed 1px #ccc;
+      }
+    }
+
+    &Header {
+      width: 32.4%;
+      padding: 20px 40px 20px 0;
+      vertical-align: middle;
+    }
+
+    &Data {
+      width: 73%;
+      padding-block: 20px;
+      vertical-align: middle;
+    }
+
+
+    @include g.mq('md-max') {
+      display: block;
+
+      tbody {
+        display: block;
+      }
+
+      &Row {
+        display: block;
+        height: auto;
+        padding-block: 20px;
+      }
+
+      &Header {
+        display: block;
+        width: auto;
+        padding: 0;
+      }
+
+      &Data {
+        display: block;
+        width: auto;
+        padding: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__itemName {
+    @include g.rem-fz(18);
+    font-weight: 500;
+  }
+
+  &__tag {
+    margin-left: 10px;
+  }
+
+  &__select {
+    appearance: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-color: #707070;
+    border-radius: 4px;
+    background-color: g.$whiteColor;
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 4px g.$mainColor;
+    }
+
+    &Wrapper {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin-block: auto;
+        width: 10px;
+        height: 10px;
+        border-right: solid 2px;
+        border-bottom: solid 2px;
+        rotate: 45deg;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__error {
+    display: none;
+  }
+
+
+}

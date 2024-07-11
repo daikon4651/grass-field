@@ -10,26 +10,26 @@
 
 <main class="main">
 
-  <div class="hero">
-    <div class="hero__inner l-container">
+  <div class="topHero">
+    <div class="topHero__inner l-container">
 
-      <p class="hero__catch">
+      <p class="topHero__catch">
         キャッチコピーの<br>
         文章がはいりますキャッチコピーの文章が入ります
       </p>
 
-      <figure class="hero__figure">
-        <img class="hero__image" src="../images/top/mv_illust.svg" alt="" width="440" height="382">
+      <figure class="topHero__figure">
+        <img class="topHero__image" src="../images/top/mv_illust.svg" alt="" width="440" height="382">
       </figure>
 
     </div><!-- /.l-container -->
-  </div><!-- /.hero -->
+  </div><!-- /.topHero -->
 
 
   <div class="l-container">
 
     <section class="topSection">
-      <h2 class="topSection__heading secondaryHeading">Service</h2>
+      <h2 class="topSection__heading secondaryHeading _center">Service</h2>
 
       <div class="topSection__list col-pc3">
         <article class="primaryCard">
@@ -80,7 +80,7 @@
 
 
     <section class="topSection">
-      <h2 class="topSection__heading secondaryHeading">Pick Up</h2>
+      <h2 class="topSection__heading secondaryHeading _center">Pick Up</h2>
 
       <div class="topSection__list col-pc4">
         <article class="secondaryCard">
@@ -139,26 +139,7 @@
 </main>
 
 
-<aside class="contactAside">
-  <div class="contactAside__inner l-container">
-
-    <h2 class="contactAside__heading tertiaryHeading _white _center">お問合わせ</h2>
-
-    <p class="contactAside__lead">下記フォームまたは電話番号へお問合わせください</p>
-
-    <a class="contactAside__btn primaryBtn _center _white" href="/contact/">
-      <i class="primaryBtn__icon fa-solid fa-envelope" aria-hidden="true"></i>お問合わせフォーム
-    </a>
-
-    <div class="contactAside__tel">
-      TEL <a class="contactAside__telNum" href="tel:03-0000-0000">03-0000-0000</a>
-    </div>
-
-    <div class="contactAside__datetime">受付時間：平日9:00〜18:00</div>
-
-  </div><!-- /.contactAside__inner.l-container -->
-</aside>
-
+<%- include('./components/common/_contact') %>
 
 <%- include('./components/common/_footer') %>
 

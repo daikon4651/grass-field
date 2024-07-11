@@ -1,0 +1,16 @@
+// パーツ・タグ
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+// プライマリ
+.primaryTag {
+  display: inline-block;
+  padding-inline: 10px;
+  background-color: g.$mainColor;
+  color: g.$whiteColor;
+  @include g.rem-fz(12);
+  font-weight: normal;
+}

@@ -1,0 +1,33 @@
+// ヒーローイメージ・セカンダリ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.secondaryHero {
+  padding: 80px 20px;
+  background-color: g.$baseColor;
+  text-align: center;
+
+  &__lead {
+    margin-block-start: 40px;
+  }
+
+  + * {
+    margin-block-start: 50px;
+  }
+
+
+  @include g.mq {
+    padding-block: 100px;
+
+    &__lead {
+      margin-block-start: 50px;
+    }
+
+    + * {
+      margin-block-start: 80px;
+    }
+  }
+}

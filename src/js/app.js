@@ -10,7 +10,7 @@
 
 
 
-// 共通の自作JavaScript
+// 共通の JavaScript
 import './modules/common.js';
 
 
