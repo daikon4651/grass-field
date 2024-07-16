@@ -79,3 +79,40 @@ minWidth992.addEventListener('change', (e) => {
 //     gNavBtn.ariaLabel = 'メインメニューを開く';
 //   }
 // }, false);
+
+
+
+
+// お問合わせフォームのプライバシーポリシーの同意
+const policyLabelText = document.querySelector('.contactForm__policyLabelText');
+const contactFormCheckbox = document.querySelector('.contactForm__checkbox');
+const contactFormBtn = document.querySelector('.contactForm__btn');
+
+
+// change でも、click でも、OK。
+// .contactForm__policyLabelText の場合は、逆になる。
+
+
+contactFormCheckbox.addEventListener('change', (e) => {
+  contactFormBtn.disabled = !contactFormCheckbox.checked;
+}, false);
+
+
+
+// contactFormCheckbox.addEventListener('click', (e) => {
+//   contactFormBtn.disabled = !contactFormCheckbox.checked;
+// }, false);
+
+
+
+// policyLabelText.addEventListener('click', (e) => {
+
+//   console.log(contactFormCheckbox.checked);
+
+//   if (contactFormCheckbox.checked) {
+//     contactFormBtn.disabled = true;
+//   } else {
+//     contactFormBtn.disabled = false;
+//   }
+
+// }, false);

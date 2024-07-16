@@ -18,9 +18,9 @@ import './modules/common.js';
 
 
 // ES Modules
-import { greet } from './modules/common.js';
+// import { greet } from './modules/common.js';
 
-greet('鈴木');
+// greet('鈴木');
 
 
 

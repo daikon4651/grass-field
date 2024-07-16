@@ -32,16 +32,40 @@
     margin-right: .5em;
   }
 
+  // 左右中央揃え
   &._center {
     margin-inline: auto;
   }
 
+  // 白
   &._white {
     border-color: global.$whiteColor;
     color: global.$whiteColor;
 
     @include global.hover-focus {
       background-color: rgba(#fff, .3);
+    }
+  }
+
+  // アクセント
+  &._accent {
+    background-color: #FF7600;
+    color: global.$whiteColor;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: .7;
+    }
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    color: global.$whiteColor;
+    cursor: default;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }

@@ -27,7 +27,6 @@
     }
 
     &Data {
-      width: 73%;
       padding-block: 20px;
       vertical-align: middle;
     }
@@ -70,43 +69,236 @@
     margin-left: 10px;
   }
 
-  &__select {
+  &__nameLabel {
+    display: block;
+
+    & + & {
+      margin-top: 10px;
+    }
+
+    &Text {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+  }
+
+  &__select,
+  &__textarea,
+  &__input {
     appearance: none;
     width: 100%;
     padding: 10px 20px;
-    border-color: #707070;
+    border: solid 1px #707070;
     border-radius: 4px;
     background-color: g.$whiteColor;
-    cursor: pointer;
+    font-family: inherit;
     outline: none;
+    color: aqua;
 
     &:focus {
-      box-shadow: 0 0 4px g.$mainColor;
+      box-shadow: 0 0 5px rgba(g.$mainColor, .7);
     }
 
-    &Wrapper {
-      position: relative;
+    .is-error & {
+      color: #df5656;
+      border-color: #df5656;
+    }
+  }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 20px;
-        margin-block: auto;
-        width: 10px;
-        height: 10px;
-        border-right: solid 2px;
-        border-bottom: solid 2px;
-        rotate: 45deg;
-        pointer-events: none;
+  &__selectWrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      margin-block: auto;
+      width: 10px;
+      height: 10px;
+      border-right: solid 2px;
+      border-bottom: solid 2px;
+      rotate: 45deg;
+      pointer-events: none;
+
+      .is-error & {
+        border-color: #df5656;
       }
     }
   }
 
+  &__radioLabel {
+
+    &Text {
+      position: relative;
+      display: inline-block;
+      padding: .3em .3em .3em 2em;
+      line-height: 1;
+      vertical-align: middle;
+      cursor: pointer;
+      outline: none;
+
+      &:focus {
+        box-shadow: 0 0 5px rgba(g.$mainColor, .7);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin-block: auto;
+        width: 22px;
+        height: 22px;
+        padding: 2px;
+        border: solid 1px #ccc;
+        border-radius: 50%;
+        background-clip: content-box;
+
+        .contactForm__radio:checked + & {
+          background-color: g.$mainColor;
+        }
+      }
+    }
+
+    & + & {
+      margin-left: 2.2em;
+    }
+  }
+
+  &__radio {
+    position: absolute;
+    outline: none;
+    visibility: hidden;
+    // opacity: 0;
+  }
+
+  &__note {
+    margin-top: 10px;
+    color: #707070;
+    @include g.rem-fz(12);
+  }
+
   &__error {
     display: none;
+    align-items: center;
+    margin-top: 16px;
+    color: #df5656;;
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 1.25em;
+      height: 1.25em;
+      margin-right: .2em;
+      background-image: url(../images/common/icon_attention.svg);
+      background-size: cover;
+    }
+
+    .is-error & {
+      display: flex;
+    }
+  }
+
+  &__policy {
+    margin-top: 50px;
+    border: solid 1px #ccc;
+    padding: 20px;
+
+    &Label {
+      display: block;
+      width: fit-content;
+      margin-inline: auto;
+      margin-top: 20px;
+
+      &Text {
+        position: relative;
+        display: inline-block;
+        padding: .3em .3em .3em 2em;
+        line-height: 1;
+        vertical-align: middle;
+        cursor: pointer;
+
+        .contactForm__checkbox:focus + & {
+          box-shadow: 0 0 5px rgba(g.$mainColor, .7);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin-block: auto;
+          width: 1.25em;
+          height: 1.25em;
+          border: solid 1px #ccc;
+          background-color: g.$whiteColor;
+        }
+
+        .contactForm__checkbox:checked + &::after {
+          content: "";
+          position: absolute;
+          top: .25em;
+          left: .4em;
+          width: .5em;
+          height: 1em;
+          border-right: solid 3px g.$mainColor;
+          border-bottom: solid 3px g.$mainColor;
+          rotate: 45deg;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__btn {
+    margin-top: 50px;
   }
 
 
+  @include g.mq {
+    padding-bottom: 80px;
+
+    &__itemName {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__nameWrapper {
+      display: flex;
+    }
+
+    &__nameLabel {
+      flex: 1;
+
+      & + & {
+        margin-top: 0;
+        margin-left: 10px;
+      }
+    }
+
+    &__policy {
+      margin-top: 80px;
+      padding: 40px;
+      text-align: center;
+
+      &Label {
+        margin-top: 50px;
+      }
+    }
+
+    &__btn {
+      margin-top: 80px;
+    }
+  }
 }
