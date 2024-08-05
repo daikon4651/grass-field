@@ -25,6 +25,13 @@ $textColor: $blackColor;
 
 
 
+// フォント
+$Noto: "Noto Sans JP", sans-serif;
+$Oswald: "Oswald", sans-serif;
+
+
+
+
 // 幅
 
 
@@ -35,19 +42,12 @@ $textColor: $blackColor;
 
 
 
-// フォント
-$Oswald: "Oswald", sans-serif;
-$Noto: "Noto Sans JP", sans-serif;
-
-
-
-
-// ブレークポイント
+// ブレイクポイント・ブレークポイント
 $breakpoints: (
   'xs-min': '(min-width: 375px), print',
   'xs-max': '(max-width: 374px), print',
-  'sm-min': '(min-width: 568px), print',
-  'sm-max': '(max-width: 567px), print',
+  'sm-min': '(min-width: 576px), print',
+  'sm-max': '(max-width: 575px), print',
   'md-min': '(min-width: 768px), print',
   'md-max': '(max-width: 767px), print',
   'lg-min': '(min-width: 992px), print',

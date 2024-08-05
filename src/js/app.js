@@ -1,3 +1,9 @@
+// Sass
+import '../scss/style.scss';
+
+
+
+
 // jQuery;
 // import $ from 'jquery';
 
@@ -20,9 +26,3 @@ import './modules/common.js';
 // import greet from './modules/common.js';
 
 // greet('北');
-
-
-
-
-// Sass
-import '../scss/style.scss';
