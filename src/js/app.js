@@ -16,7 +16,7 @@ import '../scss/style.scss';
 
 
 
-// 共通の JavaScript
+// 共通
 import './modules/common.js';
 
 
