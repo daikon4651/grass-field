@@ -7,8 +7,8 @@ import '../scss/style.scss';
 // jQuery;
 // import $ from 'jquery';
 
-// $('.hero').css({
-//   color: 'tomato',
+// $('.test12').css({
+//   color: 'red',
 //   backgroundColor: 'gold',
 //   'font-size': 36
 // });
